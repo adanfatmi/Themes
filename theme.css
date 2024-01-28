@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-colour: rgb(76, 92, 92);
+    --secondary-colour:rgba(40,44,44);
+    --margin-container: 10px 0;
+    --padding-containers: 20px;
+    --text-colour-primary: #fdfdfd;
+}
+
+body{
+    --font-family:Arial, helvetica, sans-serif;
+    font-family: var(--font-family);
+    color: var(--text-colour-primary);
+}
+
+header,
+footer{
+    background: var(--primary-colour);
+    padding: var(--padding-containers);
+    text-align: center;
+}
+
+section{
+    --section-bg: #f1f1f1;
+    background-color: var(--section-bg, pink);
+    padding: var(--padding-containers);
+
+}
+
+section.section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box{
+    --box-bod: 1px solid var(--secondary-colour);
+    --box-margin: 5px;
+    --box-padding: 5px;
+    --box-shadow: 2px 3px 3px var(--secondary-colour);
+    --box-radius:3px;
+    --box-bg: var(--primary-colour);
+}
+
+.box{
+    border: var(--box-bod);
+    margin: var(--box-margin);
+    padding: var(--box-padding);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--box-radius);
+    background: var(--box-bg);
+}
+
+.box h3{
+    padding: var(--box-padding);
+}
+
+.box p{
+    padding: var(--box-padding);
+}
+
+section.section2 .box{
+    margin-bottom: 20px;
+}
+
+.theme{
+    padding: var(--padding-containers);
+    text-align: center;   
+}
+
+button{
+    --btn-padding: 10px 20px;
+    --btn-font-size: 1rem;
+}
+
+button{
+    padding: var(--btn-padding);
+    font-size: var(--btn-font-size);
+    cursor: pointer;
+}
